@@ -1,0 +1,3 @@
+C:/exemple-menu/cmake-build-debug/CMakeFiles/exemple_menu.dir
+C:/exemple-menu/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/exemple-menu/cmake-build-debug/CMakeFiles/rebuild_cache.dir
