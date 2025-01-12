@@ -138,7 +138,7 @@ void tourPlacementMur(int plateau[NB_LIGNES][NB_COLONNES], int joueur, int nbJou
     printf("Joueur %d, il vous reste %d murs\n", joueur, *nbMurs);
 
 
-    gotoligcol(19, 123);
+    gotoligcol(19, 120);
     if (estHorizontal) {
         printf("Joueur %d - Mur horizontal: Z/S=2 cases haut/bas, Q/D=1 case gauche/droite", joueur);
     } else {

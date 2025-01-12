@@ -207,7 +207,7 @@ void verifierVictoire(int plateau[NB_LIGNES][NB_COLONNES], int joueur) {
         feuxArtifice();
         Color(15,0);
         gotoligcol(30, 90);
-        printf("Felicitation ! Joueur %d (%s) a gagne !\n", joueur, getSymboleJoueur(joueur, pionJoueurActuel));
+        printf("Felicitation ! Joueur %s (%s) a gagne !\n", joueur, getSymboleJoueur(joueur, pionJoueurActuel));
         Sleep(10000);
         clearScreen();
 

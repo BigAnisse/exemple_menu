@@ -133,11 +133,12 @@ void menuPrincipal(Jeu *const jeu) {
         gotoligcol(25, 90);
         printf("%c   Nombre de joueurs (2/4):    %c\n", LIGNE_V, LIGNE_V);
         gotoligcol(26, 90);
-        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n", BG,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", BG,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,
                LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,BD);
 
         afficherMenu(jeu);
-
+        gotoligcol(30,95);
+        printf("Votre choix : ");
         scanf("%d", &choix);
 
         switch (choix) {
@@ -185,7 +186,7 @@ void menuPrincipal(Jeu *const jeu) {
                 break;
             }
             default: {
-                gotoligcol(12, 0);
+                gotoligcol(35, 95);
                 printf("Choix incorrect !");
                 Sleep(1500); // Pause de 1.5 secondes
                 break;

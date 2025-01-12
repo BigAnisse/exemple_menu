@@ -230,11 +230,12 @@ Color(14, 0);
     printf("      |__||_______||_______||_|   |_||___||______| |_______||_|   |_|");
 
 gotoligcol(30, 85);
-printf("Appuyez sur entree pour commencer...");
+printf("Appuyez sur espace pour commencer...");
 
 Color(15, 0);
     while(1) {
         if(_kbhit()) {
+
             menuPrincipal(&jeu);
         }
     }

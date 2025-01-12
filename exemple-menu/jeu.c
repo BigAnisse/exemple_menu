@@ -110,12 +110,15 @@ void partie(Jeu *const jeu) {
                     Sleep(1500);
                     tourValide = false;
                 }
+
             }
 
 
 
         gotoligcol(47, 0);
         printf("                                                    ");
+        gotoligcol(29,130);
+        printf("                               ");
         if(tourValide) { // VERIFIE SI LE JOUEUR A ENTRER UN CHIFFRE ENTRE 0 ET 4
             joueurSuivant(jeu); // PASSAGE AU JOUEUR SUIVANT
         }
