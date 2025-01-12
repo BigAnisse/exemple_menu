@@ -239,9 +239,7 @@ void demanderPions(char *pion) {
 void afficherRegle() {
     Color(15, 0);
     gotoligcol(20, 90);
-    printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c MENU PRINCIPAL %c%c%c%c%c%c%c%c%c%c%c%c%c%c\n", AG,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,AD);
-    gotoligcol(21, 70);
-    printf("%c                                                                                                %c\n",LIGNE_V, LIGNE_V);
+
     gotoligcol(22, 70);
     printf("%c  1. le but est d'arriver en premier a la ligne opposer                                         %c\n",LIGNE_V, LIGNE_V);
     gotoligcol(23, 70);
@@ -256,13 +254,9 @@ void afficherRegle() {
     printf("%c  6. quand deux pions sont face a face on peut sauter                                           %c\n",LIGNE_V, LIGNE_V);
     gotoligcol(28, 70);
     printf("%c  7. durer 10 a 20 min                                                                          %c\n",LIGNE_V,LIGNE_V);
-    gotoligcol(29, 70);
-    printf("%c                                                                                                %c\n",LIGNE_V,LIGNE_V);
-    gotoligcol(30,70);
-    printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n", BG,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,LH,BD);
 }
 void feuxArtifice() {
-    Color(11,12);
+    Color(11,0);
     // Feux d'artifice du coin supérieur gauche
     gotoligcol(10, 40);
     printf("   |   ");

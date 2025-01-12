@@ -243,6 +243,6 @@ void tourPlacementMur(int plateau[NB_LIGNES][NB_COLONNES], int joueur, int nbJou
     }
 
 
-    gotoligcol(19, 123);
+    gotoligcol(19, 120);
     printf("                                                                          ");
 }
