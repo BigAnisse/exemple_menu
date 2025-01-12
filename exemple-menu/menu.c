@@ -7,10 +7,10 @@
 #include <math.h>
 
 void clearScreen() {
-    system("cls"); // Pour Windows
+    system("cls"); // SUPPRIME TOUT CE QU4IL Y A A L ECRAN
 }
 
-
+// ICI BEAUCOUP DE FONCTION CONCERNANT L AFFICHAGE
 void afficherMenu() {
     Color(15, 0);
     gotoligcol(20, 85);

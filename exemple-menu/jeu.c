@@ -18,7 +18,7 @@ void afficherMenuPartie() {
     gotoligcol(11, 120);
     printf("%c                                      %c\n",LIGNE_V,LIGNE_V);
     gotoligcol(12, 120);
-    printf("%c  1. Déplacer mon pion               %c\n",LIGNE_V,LIGNE_V);
+    printf("%c  1. Deplacer mon pion               %c\n",LIGNE_V,LIGNE_V);
     gotoligcol(13, 120);
     printf("%c  2. Poser un mur                     %c\n",LIGNE_V,LIGNE_V);
     gotoligcol(14, 120);

@@ -62,7 +62,7 @@ bool estMouvementValide(int plateau[NB_LIGNES][NB_COLONNES], int nouvLig, int no
     int diffCol = nouvCol - ancienneCol;
 
 
-    if (abs(diffLig) + abs(diffCol) != 2) { // VERIFIE QUE LE JOUEUR S4EST DEPLACER DE DEUX CASE
+    if (abs(diffLig) + abs(diffCol) != 2) { // VERIFIE QUE LE JOUEUR S EST DEPLACER DE DEUX CASE
         return false;
     }
 
@@ -79,7 +79,7 @@ bool estMouvementValide(int plateau[NB_LIGNES][NB_COLONNES], int nouvLig, int no
 }
 
 
-bool deplacerPion(int plateau[NB_LIGNES][NB_COLONNES], int joueur, int *ligJ, int *colJ, char direction) {
+bool deplacerPion(int plateau[NB_LIGNES][NB_COLONNES], int joueur, int *ligJ, int *colJ, char direction) { // CALCULE LA NOUVELLE POSISITION DU PION
     int nouvLig = *ligJ;
     int nouvCol = *colJ;
 
@@ -97,7 +97,7 @@ bool deplacerPion(int plateau[NB_LIGNES][NB_COLONNES], int joueur, int *ligJ, in
     }
 
 
-    if (!estMouvementValide(plateau, nouvLig, nouvCol, *ligJ, *colJ)) {
+    if (!estMouvementValide(plateau, nouvLig, nouvCol, *ligJ, *colJ)) { // SI LE MOUVEMENT N EST PAS VALIDE AFFICHER MESSAGE ET LE JOUEUR RECOMMENCE
         Color(5,0);
         gotoligcol(21, 120);
         printf("Mouvement impossible ! ");
@@ -110,14 +110,14 @@ bool deplacerPion(int plateau[NB_LIGNES][NB_COLONNES], int joueur, int *ligJ, in
 
 
 
-    effacerPion(plateau, *ligJ, *colJ);
+    effacerPion(plateau, *ligJ, *colJ); // EFFACE LE PION
 
 
-    *ligJ = nouvLig;
+    *ligJ = nouvLig;    // MET A JOUR LES NOUVELLE COORDONNEES
     *colJ = nouvCol;
 
 
-    dessinerPion(plateau, *ligJ, *colJ, joueur);
+    dessinerPion(plateau, *ligJ, *colJ, joueur); //  DESSINE LE PION SI LES CONDITION SONT VERIFIER
 
     return true;
 }
@@ -127,7 +127,7 @@ void tourJoueur(int plateau[NB_LIGNES][NB_COLONNES], int joueur) {
     int ligJ = -1, colJ = -1;
 
 
-    for (int i = 0; i < NB_LIGNES && ligJ == -1; i++) {
+    for (int i = 0; i < NB_LIGNES && ligJ == -1; i++) {  // BALLAIE LE PLATEAU POUR TROUVER LA POSITION DU JOUEUR
         for (int j = 0; j < NB_COLONNES; j++) {
             if (plateau[i][j] == joueur) {
                 ligJ = i;
@@ -151,7 +151,7 @@ void tourJoueur(int plateau[NB_LIGNES][NB_COLONNES], int joueur) {
     bool tourFini = false;
 
     do {
-        if (_kbhit()) {
+        if (_kbhit()) {   // DEPLACEMENT EN FONCTION DES TOUCHE
 
             touche = _getch();
 
@@ -167,11 +167,11 @@ void tourJoueur(int plateau[NB_LIGNES][NB_COLONNES], int joueur) {
                     break;
             }
         }
-    } while (!tourFini);
+    } while (!tourFini); // TANT QUE LE JOUEUR N A PAS VALIDER
 
 
     gotoligcol(19, 123);
-    printf("                                                         ");
+    printf("                                                         "); // PERMET D EFFACER LES MESSAGE
     gotoligcol(2, 1);
     printf("                    ");
 }
